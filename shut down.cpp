@@ -4,6 +4,18 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+
+//2020.12.13 指针占内存的大小
+int main()
+{
+	printf("%d\n",sizeof(char*));//win 32 -4 x64 -8
+	printf("%d\n",sizeof(int*));//win 32 -4 x64 -8
+	printf("%d\n",sizeof(float*));//win 32 -4 x64 -8
+	printf("%d\n",sizeof(double*));//win 32 -4 x64 -8
+	
+
+	return 0;
+}
 //2020.12.13 指针
 //int main()
 //{
