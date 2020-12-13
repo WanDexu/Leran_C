@@ -5,17 +5,42 @@
 #include <stdlib.h>
 #include <string.h>
 
-//2020.12.13 指针占内存的大小
+//2020.12.13 结构体用于描述复杂的类型
+//关键字 struct 
+struct book
+{
+	char Name[20];//C语言程序设计
+	float price;// 55.0元
+
+
+};//分号结束类型描述
+//book B1;
 int main()
 {
-	printf("%d\n",sizeof(char*));//win 32 -4 x64 -8
-	printf("%d\n",sizeof(int*));//win 32 -4 x64 -8
-	printf("%d\n",sizeof(float*));//win 32 -4 x64 -8
-	printf("%d\n",sizeof(double*));//win 32 -4 x64 -8
-	
-
+	//利用结构体类型创造一个对应类型变量
+	struct book B1 = {"C语言程序设计",55.0};
+	struct book* pd = &B1;
+	//结构体变量 . 结构体成员
+	//结构体指针变量 -> 结构体成员
+	printf("书名：%s\n", B1.Name);
+	printf("价格：%.2f\n", B1.price); //55.00
+	B1.price = 34.28;
+	printf("促销价格：%.2f\n", B1.price); //34.28
+	printf("书名：%s\n",pd->Name);
+	printf("价格：%.2f\n", pd->price); //34.28
 	return 0;
 }
+////2020.12.13 指针占内存的大小
+//int main()
+//{
+//	printf("%d\n",sizeof(char*));//win 32 -4 x64 -8
+//	printf("%d\n",sizeof(int*));//win 32 -4 x64 -8
+//	printf("%d\n",sizeof(float*));//win 32 -4 x64 -8
+//	printf("%d\n",sizeof(double*));//win 32 -4 x64 -8
+//	
+//
+//	return 0;
+//}
 //2020.12.13 指针
 //int main()
 //{
