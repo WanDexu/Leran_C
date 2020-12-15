@@ -5,31 +5,41 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+////2020.12.14
+//int main()
+//{
+//
+//
+//	return 0;
+//}
 //2020.12.13 结构体用于描述复杂的类型
 //关键字 struct 
-struct book
-{
-	char Name[20];//C语言程序设计
-	float price;// 55.0元
-
-
-};//分号结束类型描述
-//book B1;
-int main()
-{
-	//利用结构体类型创造一个对应类型变量
-	struct book B1 = {"C语言程序设计",55.0};
-	struct book* pd = &B1;
-	//结构体变量 . 结构体成员
-	//结构体指针变量 -> 结构体成员
-	printf("书名：%s\n", B1.Name);
-	printf("价格：%.2f\n", B1.price); //55.00
-	B1.price = 34.28;
-	printf("促销价格：%.2f\n", B1.price); //34.28
-	printf("书名：%s\n",pd->Name);
-	printf("价格：%.2f\n", pd->price); //34.28
-	return 0;
-}
+//struct book
+//{
+//	char Name[20];//C语言程序设计
+//	float price;// 55.0元
+//
+//
+//};//分号结束类型描述
+////book B1;
+//int main()
+//{
+//	//利用结构体类型创造一个对应类型变量
+//	struct book B1 = {"C语言程序设计",55.0};
+//	struct book* pd = &B1;
+//	//结构体变量 . 结构体成员
+//	//结构体指针变量 -> 结构体成员
+//	printf("书名：%s\n", B1.Name);
+//	strcpy(B1.Name,"xuezk");// strcpy 字符串拷贝（目的地，内容）
+//	
+//	printf("价格：%.2f\n", B1.price); //55.00
+//	B1.price = 34.28;
+//	printf("促销价格：%.2f\n", B1.price); //34.28
+//	printf("书名：%s\n",pd->Name);
+//	printf("价格：%.2f\n", pd->price); //34.28
+//	return 0;
+//}
 ////2020.12.13 指针占内存的大小
 //int main()
 //{
@@ -78,6 +88,73 @@ int main()
 //    }
 //    return 0;
 //}
+//2020.12.15
+//判断一个数是否是奇数？
+//int main()
+//{
+//	int a;
+//	printf("请输入一个数：\n");
+//	scanf("%d", &a);
+//	if (a % 2 != 0)
+//	{
+//		printf("%d 是奇数\n", a);
+//
+//	}
+//	else {
+//
+//		printf("%d 不是奇数\n", a);
+//	}
+//	return 0;
+//}
+//2020.12.15
+//输出1~100之间的所有奇数
+//int main()
+//{
+//	for (int i = 1; i <= 100; i++)
+//	{
+//		if (i % 10 == 0) 
+//		{
+//			printf("\n");
+//		}
+//		if (i % 2 != 0)
+//			printf("%d ", i);
+//	}
+//	return 0;
+//}
+
+//2020.12.15
+//
+int main()
+{
+	int a = 0;
+	scanf("%d", &a);
+	switch (a)
+	{
+	case 1:
+		printf("星期一");
+		break;
+	case 2:
+		printf("星期二");
+		break;
+	case 3:
+		printf("星期三");
+		break;
+	case 4:
+		printf("星期四");
+		break;
+	case 5:
+		printf("星期五");
+		break;
+	case 6:
+		printf("星期六");
+		break;
+	case 7:
+		printf("星期日");
+		break;
+	default: break;
+	}
+	return 0;
+}
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
